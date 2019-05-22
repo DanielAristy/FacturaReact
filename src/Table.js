@@ -4,9 +4,11 @@ const TableHeader = () => {
     return (
         <thead>
             <tr>
-                <th>Name</th>
-                <th>Job</th>
-                <th>Remove</th>
+                <th>Id Factura</th>
+                <th>Id Producto</th>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Eliminar</th>
             </tr>
         </thead>
     );
@@ -15,10 +17,13 @@ const TableHeader = () => {
 const TableBody = props => { 
     const rows = props.characterData.map((row, index) => {
         return (
+            
             <tr key={index}>
-                <td>{row.name}</td>
-                <td>{row.job}</td>
-                <td><button onClick={() => props.removeCharacter(index)}>Delete</button></td>
+                <td>{row.idFactura}</td>
+                <td>{row.idProducto}</td>
+                <td>{row.nombre}</td>
+                <td>{row.precio}</td>
+                <td><button onClick={() => props.removeCharacter(index)}>Eliminar</button></td>
             </tr>
         );
     });

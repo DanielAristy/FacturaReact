@@ -5,8 +5,10 @@ class Form extends Component {
         super(props);
         
         this.initialState = {
-            name: '',
-            job: ''
+            idFactura: '',
+            idProducto: '',
+            nombre: '',
+            precio: ''
         };
 
         this.state = this.initialState;
@@ -28,24 +30,30 @@ class Form extends Component {
     }
 
     render() {
-        const { name, job } = this.state; 
+        const { idProducto,nombre,precio } = this.state; 
 
         return (
             <form onSubmit={this.onFormSubmit}>
-                <label>Name</label>
+                <label>idProducto</label>
                 <input 
                     type="text" 
-                    name="name" 
-                    value={name} 
+                    name="idProducto" 
+                    value={idProducto} 
                     onChange={this.handleChange} />
-                <label>Job</label>
+                <label>Nombre</label>
                 <input 
                     type="text" 
-                    name="job" 
-                    value={job} 
+                    name="nombre" 
+                    value={nombre} 
+                    onChange={this.handleChange} />
+                <label>Precio</label>
+                <input 
+                    type="text" 
+                    name="precio" 
+                    value={precio} 
                     onChange={this.handleChange} />
                 <button type="submit">
-                    Submit
+                    Agregar
                 </button>
             </form>
         );
