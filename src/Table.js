@@ -36,9 +36,13 @@ class Table extends Component {
 
         return (
             //Cargan componentes de la tabla
-            <table>
-                <TableHeader />
-                <TableBody characterData={characterData} removeCharacter={removeCharacter} />
+            <table class="tabla">
+                <div>
+                    <TableHeader />
+                    <TableBody characterData={characterData} removeCharacter={removeCharacter} />        
+                </div>
+                
+                
             </table>
         );
     }
