@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import Table from './Table';
 import Form from './Form';
+import { ReactComponent as Logo } from './Logo.svg';
 
 class App extends Component {
     state = {
@@ -27,8 +28,8 @@ class App extends Component {
         
         return (
             <div className="container">
-                <h1>Factura Uco</h1>
-                <p>Agregar los productos a a factura.</p>
+                <Logo />
+                <p>Agregar los productos a la factura.</p>
                 <Table
                     characterData={characters}
                     removeCharacter={this.removeCharacter}

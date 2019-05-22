@@ -29,8 +29,8 @@ class Form extends Component {
     }
 
     render() {
-        const { idProducto,nombre,precio } = this.state; 
-
+        const { nombre,precio } = this.state; 
+        //Entrada de Texto y tipos de datos
         return (
             <form onSubmit={this.onFormSubmit}>
                 <label>Nombre</label>
@@ -41,7 +41,7 @@ class Form extends Component {
                     onChange={this.handleChange} />
                 <label>Precio</label>
                 <input 
-                    type="text" 
+                    type="number" 
                     name="precio" 
                     value={precio} 
                     onChange={this.handleChange} />

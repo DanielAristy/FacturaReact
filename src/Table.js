@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Form from './Form';
 
 const TableHeader = () => { 
     return (
+        //tabla donde se van almacenar los productos con cada uno de sus campos
         <thead>
             <tr>
                 <th>Id Producto</th>
@@ -16,11 +16,12 @@ const TableHeader = () => {
 
 const TableBody = props => { 
     const rows = props.characterData.map((row, index) => {
+        //Donde se mapean los datos que fueron obtenidos en la entrada de texto
         return (
             <tr key={index}>             
                 <td>{row.idProducto +=1}</td>
                 <td>{row.nombre}</td>
-                <td>{row.precio}</td>
+                <td>{"$" + row.precio}</td>
                 <td><button onClick={() => props.removeCharacter(index)}>Eliminar</button></td>
             </tr>
         );
@@ -34,6 +35,7 @@ class Table extends Component {
         const { characterData, removeCharacter } = this.props;
 
         return (
+            //Cargan componentes de la tabla
             <table>
                 <TableHeader />
                 <TableBody characterData={characterData} removeCharacter={removeCharacter} />
