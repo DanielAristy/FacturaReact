@@ -3,13 +3,12 @@ import React, {Component} from 'react';
 class Form extends Component {
     constructor(props) {
         super(props);
-        
         this.initialState = {
-            idFactura: '',
-            idProducto: '',
+            idProducto: 0,
             nombre: '',
             precio: ''
         };
+        var idFactura = 0
 
         this.state = this.initialState;
     }
@@ -34,12 +33,6 @@ class Form extends Component {
 
         return (
             <form onSubmit={this.onFormSubmit}>
-                <label>idProducto</label>
-                <input 
-                    type="text" 
-                    name="idProducto" 
-                    value={idProducto} 
-                    onChange={this.handleChange} />
                 <label>Nombre</label>
                 <input 
                     type="text" 
