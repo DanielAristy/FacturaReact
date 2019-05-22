@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Form from './Form';
 
 const TableHeader = () => { 
     return (
@@ -16,7 +17,7 @@ const TableHeader = () => {
 const TableBody = props => { 
     const rows = props.characterData.map((row, index) => {
         return (
-            <tr key={index}>              
+            <tr key={index}>             
                 <td>{row.idProducto +=1}</td>
                 <td>{row.nombre}</td>
                 <td>{row.precio}</td>

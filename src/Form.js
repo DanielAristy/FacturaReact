@@ -8,7 +8,7 @@ class Form extends Component {
             nombre: '',
             precio: ''
         };
-        var idFactura = 0
+        this.state = { idFactura: parseInt(Math.random()*1000)}
 
         this.state = this.initialState;
     }
